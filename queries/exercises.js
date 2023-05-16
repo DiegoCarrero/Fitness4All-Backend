@@ -20,10 +20,10 @@ const getAnExercise = async (id) => {
 }
 
 const updateExercise = async (id, exercise) => {
-    const { name, image, calories, fiber, sodium, sugar, gluten_free, flavor_profile, is_healthy } = exercise;
+    const { name, image, muscleGroup, targetedMuscles } = exercise;
 
     try {
-        const updatedExercise = await db.one("UPDATE exercises SET name=$1, image=$2, calories=$3, fiber=$4, sodium=$5, sugar=$6, gluten_free=$7, flavor_profile=$8, is_healthy=$9 WHERE id=$10 RETURNING *", [name, image, calories, fiber, sodium, sugar, gluten_free, flavor_profile, is_healthy, id]);
+        const updatedExercise = await db.one("UPDATE exercises SET name=$1, image=$2, muscleGroup=$3, targetedMuscles=$4 WHERE id=$5 RETURNING *", [name, image, muscleGroup, targetedMuscles, id]);
         return updatedExercise;
     } catch (e) {
         return e;
@@ -31,10 +31,10 @@ const updateExercise = async (id, exercise) => {
 }
 
 const createExercise = async (exerciseToAdd) => {
-    const { name, image, calories, fiber, sodium, sugar, gluten_free, flavor_profile, is_healthy } = exerciseToAdd;
+    const { name, image, muscleGroup, targetedMuscles } = exerciseToAdd;
     
     try {
-        const newExercise = await db.one("INSERT INTO exercises (name, image, calories, fiber, sodium, sugar, gluten_free, flavor_profile, is_healthy) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING *", [name, image, calories, fiber, sodium, sugar, gluten_free, flavor_profile, is_healthy])
+        const newExercise = await db.one("INSERT INTO exercises (name, image, muscleGroup, targetedMuscles) VALUES ($1, $2, $3, $4) RETURNING *", [name, image, muscleGroup, targetedMuscles])
         return newExercise;
     } catch (e) {
         return e;
