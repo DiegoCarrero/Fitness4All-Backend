@@ -9,5 +9,5 @@ CREATE TABLE exercises (
     name TEXT NOT NULL,
     image TEXT,
     muscleGroup TEXT NOT NULL,
-    targetedMuscle TEXT NOT NULL
+    targetedMuscles TEXT NOT NULL
 );
