@@ -7,4 +7,5 @@ INSERT INTO exercises (name, image, muscleGroup, targetedMuscles) VALUES
 ('Glute Brige', 'https://opt.net.au/wp-content/uploads/hip-bridge.jpg', 'Legs', 'Hamstrings and Glutes'),
 ('Pike Push Up', 'https://thesuperhumanfitness.com/wp-content/uploads/2018/02/Pike-push-up.jpg', 'Shoulders', 'Anterior Deltoids, Triceps, Pectorals, Traps'),
 ('Bodyweight Calf Raise', 'https://i.pinimg.com/564x/aa/e6/42/aae64297e34eb0cba5dab0442ee70ef6--workout-men-workout-routines.jpg', 'Legs', 'Gastrocnemius'),
-('Incline Push Up', 'https://www.silversneakers.com/wp-content/uploads/2019/08/SSBlog.Exercise_ModifiedPushUp.jpg', 'Chest', 'Pectorals, Anterior Deltoids and Triceps');
+('Incline Push Up', 'https://www.silversneakers.com/wp-content/uploads/2019/08/SSBlog.Exercise_ModifiedPushUp.jpg', 'Chest', 'Pectorals, Anterior Deltoids and Triceps'),
+('Chin Up', 'https://sport.herts.ac.uk/news-images/2022-Oct/ecc-chin-up--t-4929.jpg', 'Back', 'Lats and Biceps');
