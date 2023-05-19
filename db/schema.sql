@@ -8,6 +8,8 @@ CREATE TABLE exercises (
     id SERIAL PRIMARY KEY,
     name TEXT NOT NULL,
     image TEXT,
-    muscleGroup TEXT NOT NULL,
-    targetedMuscles TEXT NOT NULL
+    muscle_group TEXT NOT NULL,
+    targeted_muscles TEXT,
+    difficulty_level TEXT,
+    how_to TEXT,
 );
