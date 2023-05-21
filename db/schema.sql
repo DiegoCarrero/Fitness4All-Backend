@@ -11,5 +11,5 @@ CREATE TABLE exercises (
     muscle_group TEXT NOT NULL,
     targeted_muscles TEXT,
     difficulty_level TEXT,
-    how_to TEXT,
-);
+    how_to TEXT
+)
