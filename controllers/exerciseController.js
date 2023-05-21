@@ -9,7 +9,7 @@ exercises.get('/', async (req, res) => {
 
 exercises.get('/:id', async (req, res) => {
     const { id } = req.params;
-    const exercise = await getAnExercise(id)
+    const exercise = await getAnExercise(id);
     exercise ? res.status(200).json(exercise) : res.status(500).json({ error: 'server error' })
 });
 
@@ -26,15 +26,25 @@ exercises.put('/:id', async (req, res) => {
 })
 
 exercises.post('/', async (req, res) => {
-    const newExercise = req.body
-    const createdExercise = await createExercise(newExercise)
-    createdExercise ? res.status(200).json(createdExercise) : res.status(500).json({ error: 'server error' })
+    const newExercise = req.body;
+
+    try {
+        const createdExercise = await createExercise(newExercise);
+        res.status(200).json(createdExercise);
+    } catch (error) {
+        res.status(500).json({ error: 'server error' });
+    }
 })
 
 exercises.delete('/:id', async (req, res) => {
     const { id } = req.params
-    const deletedExercise = await deleteExercise(id)
-    deletedExercise ? res.status(200).json(deletedExercise) : res.status(500).json({ error: 'server error' })
+
+    try {
+        const deletedExercise = await deleteExercise(id);
+        res.status(200).json(deletedExercise);
+    } catch (error) {
+        res.status(500).json({ error: 'server error' });
+    }
 })
 
 module.exports = exercises;
