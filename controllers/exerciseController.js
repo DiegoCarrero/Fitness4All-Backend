@@ -1,6 +1,6 @@
 const express = require('express');
 const exercises = express.Router()
-const { getAllExercises, getAnExercise, createExercise, deleteExercise, updateExercise } = require('../queries/Exercises');
+const { getAllExercises, getAnExercise, createExercise, deleteExercise, updateExercise } = require('../queries/exercises');
 
 exercises.get('/', async (req, res) => {
     const allExercises = await getAllExercises();
